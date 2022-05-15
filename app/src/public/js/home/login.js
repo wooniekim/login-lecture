@@ -12,6 +12,11 @@ function login(){
         id : id.value,
         pw : pw.value,
     };
-
-    console.log(req);
+    fetch("/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json" // json형태로 데이터를 전달한다는 것을 명시
+        },
+        body: JSON.stringify(req),    
+    })
 }
