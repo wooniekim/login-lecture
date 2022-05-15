@@ -142,4 +142,8 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+<<<<<<< Updated upstream
 # End of https://www.toptal.com/developers/gitignore/api/node
+=======
+# End of https://www.toptal.com/developers/gitignore/api/node
+>>>>>>> Stashed changes
