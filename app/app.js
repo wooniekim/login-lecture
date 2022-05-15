@@ -10,7 +10,11 @@ const home = require('./src/routes/home'); // routes의 home폴더 안에 있는
 // 앱 세팅
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
-app.use(express.static(`${__dirname}/src/public`))
+app.use(express.static(`${__dirname}/src/public`));
+
+app.listen(3000, () => { // 포트지정
+    console.log("Server Start");
+})
 
 app.use("/", home); // use -> 미들웨어를 등록해주는 메서드, "/"경로로 오면 home으로 이동
 
