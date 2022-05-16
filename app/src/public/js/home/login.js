@@ -20,7 +20,14 @@ function login(){
         body: JSON.stringify(req),    
     })
     .then((res) => res.json())
-    .then(console.log);
-    // .then((res) => console.log(res))
+    .then((res) => {
+        if (res.success) {
+            location.href = "/" // 로그인에 성공할 시 루트 디렉터리로 감
+        } else{
+            alert(res.msg);
+        }
+    }).catch((err) => {
+        console.error("로그인중 에러 발생");
+    })
     // res.json의 반환 값은 promise다
 }
