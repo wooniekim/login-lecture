@@ -19,4 +19,8 @@ function login(){
         },
         body: JSON.stringify(req),    
     })
+    .then((res) => res.json())
+    .then(console.log);
+    // .then((res) => console.log(res))
+    // res.json의 반환 값은 promise다
 }
